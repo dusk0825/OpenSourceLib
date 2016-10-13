@@ -1,0 +1,7 @@
+##### namespace
+	 
+ns2 = "http://server.ws.vss.cms.hikvision.com/VagServiceSoap11Binding"
+ns1 = "http://server.ws.vss.cms.hikvision.com"
+ns3 = "http://server.ws.vss.cms.hikvision.com/VagServiceSoap12Binding"
+
+##### type

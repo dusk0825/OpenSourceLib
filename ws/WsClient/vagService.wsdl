@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://server.ws.vss.cms.hikvision.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://server.ws.vss.cms.hikvision.com">
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://server.ws.vss.cms.hikvision.com">
+            <xs:element name="getServiceByType">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="vagSysCode" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="nodeType" type="xs:int"/>
+                        <xs:element minOccurs="0" name="srcIndexCode" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="netZoneId" type="xs:long"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getServiceByTypeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourcesByOrg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="vagSysCode" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="userId" type="xs:long"/>
+                        <xs:element minOccurs="0" name="orgCode" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="resType" type="xs:int"/>
+                        <xs:element minOccurs="0" name="operCode" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourcesByOrgResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourcePageByPag">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="sysCode" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="resourceType" type="xs:int"/>
+                        <xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+                        <xs:element minOccurs="0" name="pageSize" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourcePageByPagResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourceByPag">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="sysCode" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="resourceType" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourceByPagResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourceById">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="vagSysCode" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="resType" type="xs:int"/>
+                        <xs:element minOccurs="0" name="resId" type="xs:long"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourceByIdResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourceByDevice">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="vagSysCode" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="encoderSysCode" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="resourceType" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourceByDeviceResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourceByCodes">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="vagSysCode" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="resType" type="xs:int"/>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="resCodes" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResourceByCodesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addDevice">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="indexcodes" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="sysCode" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addDeviceResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="addDeviceRequest">
+        <wsdl:part name="parameters" element="ns:addDevice"/>
+    </wsdl:message>
+    <wsdl:message name="addDeviceResponse">
+        <wsdl:part name="parameters" element="ns:addDeviceResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getResourceByCodesRequest">
+        <wsdl:part name="parameters" element="ns:getResourceByCodes"/>
+    </wsdl:message>
+    <wsdl:message name="getResourceByCodesResponse">
+        <wsdl:part name="parameters" element="ns:getResourceByCodesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getServiceByTypeRequest">
+        <wsdl:part name="parameters" element="ns:getServiceByType"/>
+    </wsdl:message>
+    <wsdl:message name="getServiceByTypeResponse">
+        <wsdl:part name="parameters" element="ns:getServiceByTypeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getResourceByPagRequest">
+        <wsdl:part name="parameters" element="ns:getResourceByPag"/>
+    </wsdl:message>
+    <wsdl:message name="getResourceByPagResponse">
+        <wsdl:part name="parameters" element="ns:getResourceByPagResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getResourcesByOrgRequest">
+        <wsdl:part name="parameters" element="ns:getResourcesByOrg"/>
+    </wsdl:message>
+    <wsdl:message name="getResourcesByOrgResponse">
+        <wsdl:part name="parameters" element="ns:getResourcesByOrgResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getResourceByIdRequest">
+        <wsdl:part name="parameters" element="ns:getResourceById"/>
+    </wsdl:message>
+    <wsdl:message name="getResourceByIdResponse">
+        <wsdl:part name="parameters" element="ns:getResourceByIdResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getResourcePageByPagRequest">
+        <wsdl:part name="parameters" element="ns:getResourcePageByPag"/>
+    </wsdl:message>
+    <wsdl:message name="getResourcePageByPagResponse">
+        <wsdl:part name="parameters" element="ns:getResourcePageByPagResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getResourceByDeviceRequest">
+        <wsdl:part name="parameters" element="ns:getResourceByDevice"/>
+    </wsdl:message>
+    <wsdl:message name="getResourceByDeviceResponse">
+        <wsdl:part name="parameters" element="ns:getResourceByDeviceResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="VagServicePortType">
+        <wsdl:operation name="addDevice">
+            <wsdl:input message="ns:addDeviceRequest" wsaw:Action="urn:addDevice"/>
+            <wsdl:output message="ns:addDeviceResponse" wsaw:Action="urn:addDeviceResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByCodes">
+            <wsdl:input message="ns:getResourceByCodesRequest" wsaw:Action="urn:getResourceByCodes"/>
+            <wsdl:output message="ns:getResourceByCodesResponse" wsaw:Action="urn:getResourceByCodesResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getServiceByType">
+            <wsdl:input message="ns:getServiceByTypeRequest" wsaw:Action="urn:getServiceByType"/>
+            <wsdl:output message="ns:getServiceByTypeResponse" wsaw:Action="urn:getServiceByTypeResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByPag">
+            <wsdl:input message="ns:getResourceByPagRequest" wsaw:Action="urn:getResourceByPag"/>
+            <wsdl:output message="ns:getResourceByPagResponse" wsaw:Action="urn:getResourceByPagResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getResourcesByOrg">
+            <wsdl:input message="ns:getResourcesByOrgRequest" wsaw:Action="urn:getResourcesByOrg"/>
+            <wsdl:output message="ns:getResourcesByOrgResponse" wsaw:Action="urn:getResourcesByOrgResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceById">
+            <wsdl:input message="ns:getResourceByIdRequest" wsaw:Action="urn:getResourceById"/>
+            <wsdl:output message="ns:getResourceByIdResponse" wsaw:Action="urn:getResourceByIdResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getResourcePageByPag">
+            <wsdl:input message="ns:getResourcePageByPagRequest" wsaw:Action="urn:getResourcePageByPag"/>
+            <wsdl:output message="ns:getResourcePageByPagResponse" wsaw:Action="urn:getResourcePageByPagResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByDevice">
+            <wsdl:input message="ns:getResourceByDeviceRequest" wsaw:Action="urn:getResourceByDevice"/>
+            <wsdl:output message="ns:getResourceByDeviceResponse" wsaw:Action="urn:getResourceByDeviceResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="VagServiceSoap11Binding" type="ns:VagServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="addDevice">
+            <soap:operation soapAction="urn:addDevice" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByCodes">
+            <soap:operation soapAction="urn:getResourceByCodes" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getServiceByType">
+            <soap:operation soapAction="urn:getServiceByType" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByPag">
+            <soap:operation soapAction="urn:getResourceByPag" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourcesByOrg">
+            <soap:operation soapAction="urn:getResourcesByOrg" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceById">
+            <soap:operation soapAction="urn:getResourceById" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourcePageByPag">
+            <soap:operation soapAction="urn:getResourcePageByPag" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByDevice">
+            <soap:operation soapAction="urn:getResourceByDevice" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="VagServiceSoap12Binding" type="ns:VagServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="addDevice">
+            <soap12:operation soapAction="urn:addDevice" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByCodes">
+            <soap12:operation soapAction="urn:getResourceByCodes" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getServiceByType">
+            <soap12:operation soapAction="urn:getServiceByType" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByPag">
+            <soap12:operation soapAction="urn:getResourceByPag" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourcesByOrg">
+            <soap12:operation soapAction="urn:getResourcesByOrg" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceById">
+            <soap12:operation soapAction="urn:getResourceById" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourcePageByPag">
+            <soap12:operation soapAction="urn:getResourcePageByPag" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByDevice">
+            <soap12:operation soapAction="urn:getResourceByDevice" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="VagServiceHttpBinding" type="ns:VagServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="addDevice">
+            <http:operation location="VagService/addDevice"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="addDevice"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="addDevice"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByCodes">
+            <http:operation location="VagService/getResourceByCodes"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getResourceByCodes"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getResourceByCodes"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getServiceByType">
+            <http:operation location="VagService/getServiceByType"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getServiceByType"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getServiceByType"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByPag">
+            <http:operation location="VagService/getResourceByPag"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getResourceByPag"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getResourceByPag"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourcesByOrg">
+            <http:operation location="VagService/getResourcesByOrg"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getResourcesByOrg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getResourcesByOrg"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceById">
+            <http:operation location="VagService/getResourceById"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getResourceById"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getResourceById"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourcePageByPag">
+            <http:operation location="VagService/getResourcePageByPag"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getResourcePageByPag"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getResourcePageByPag"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getResourceByDevice">
+            <http:operation location="VagService/getResourceByDevice"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getResourceByDevice"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getResourceByDevice"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="VagService">
+        <wsdl:port name="VagServiceHttpSoap11Endpoint" binding="ns:VagServiceSoap11Binding">
+            <soap:address location="http://localhost/vss/services/invalidate/CommonService"/>
+        </wsdl:port>
+        <wsdl:port name="VagServiceHttpSoap12Endpoint" binding="ns:VagServiceSoap12Binding">
+            <soap12:address location="http://localhost/vss/services/invalidate/CommonService"/>
+        </wsdl:port>
+        <wsdl:port name="VagServiceHttpEndpoint" binding="ns:VagServiceHttpBinding">
+            <http:address location="http://localhost/vss/services/invalidate/CommonService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

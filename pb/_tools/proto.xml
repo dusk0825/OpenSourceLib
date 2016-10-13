@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<NotepadPlus>
+	<AutoComplete>
+		<Environment ignoreCase="yes" startFunc="{" stopFunc="}" paramSeparator="," terminal=";" />
+		<KeyWord name="bool" />
+		<KeyWord name="bytes" />
+		<KeyWord name="contained" />
+		<KeyWord name="contains" />
+		<KeyWord name="default" />
+		<KeyWord name="double" />
+		<KeyWord name="enum" />
+		<KeyWord name="extend" />
+		<KeyWord name="extensions" />
+		<KeyWord name="false" />
+		<KeyWord name="fixed32" />
+		<KeyWord name="fixed64" />
+		<KeyWord name="FIXME" />
+		<KeyWord name="float" />
+		<KeyWord name="group" />
+		<KeyWord name="import" />
+		<KeyWord name="int32" />
+		<KeyWord name="int64" />
+		<KeyWord name="max" />
+		<KeyWord name="message" />
+		<KeyWord name="option" />
+		<KeyWord name="optional" />
+		<KeyWord name="package" />
+		<KeyWord name="repeated" />
+		<KeyWord name="required" />
+		<KeyWord name="returns" />
+		<KeyWord name="rpc" />
+		<KeyWord name="service" />
+		<KeyWord name="sfixed32" />
+		<KeyWord name="sfixed64" />
+		<KeyWord name="sint32" />
+		<KeyWord name="sint64" />
+		<KeyWord name="string" />
+		<KeyWord name="syntax" />
+		<KeyWord name="to" />
+		<KeyWord name="TODO" />
+		<KeyWord name="true" />
+		<KeyWord name="uint32" />
+		<KeyWord name="uint64" />
+		<KeyWord name="XXX" />
+	</AutoComplete>
+</NotepadPlus>
+

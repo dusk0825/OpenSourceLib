@@ -1,0 +1,41 @@
+/L20"Protocol Buffer" ProtoBuff Line Comment = // Block Comment On = /* Block Comment Off = */ String Chars = "' File Extensions = proto
+/Delimiters = ;= 	{}[]()
+/Indent Strings = "{" ":"
+/Unindent Strings = "}"
+/Open Brace Strings =  "{" "(" "["
+/Close Brace Strings = "}" ")" "]"
+/Open Fold Strings = "{"
+/Close Fold Strings = "}"
+/C1"Keywords" STYLE_KEYWORD
+contained contains
+enum extend extensions
+FIXME
+group
+import
+message
+option optional
+package
+repeated required returns rpc
+service syntax
+to TODO
+XXX 
+/C2"Variable Keywords" STYLE_KEYWORD
+bool bytes
+double 
+false fixed32 fixed64 float
+int32 int64 
+sfixed32 sfixed64 sint32 sint64 string
+true
+uint32 uint64 
+/C3"Optional Keywords" STYLE_KEYWORD
+cc_generic_services
+default deprecated
+java_generic_services java_package java_outer_classname
+message_set_wire_format
+optimize_for
+packed py_generic_services
+/C4"Predefined" STYLE_KEYWORD
+CODE_SIZE
+LITE_RUNTIME
+SPEED
+max

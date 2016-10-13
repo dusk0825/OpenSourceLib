@@ -1,0 +1,65 @@
+package test;
+
+//@test info
+message PosCameraRelInfo
+{
+    optional int32  camera_id           = 1;	
+    optional int32  poscam_relid	= 2;	
+    optional string camera_index        = 3;    
+}
+
+message PosEventInfo
+{
+    required string pos_seq             = 1;	
+    optional string consume             = 2;	
+    optional string amount              = 3;	
+    optional string consume_time        = 4;	
+    optional string operator_num        = 5;	
+    optional string vip                 = 6;	
+    repeated string product_typename    = 7;	
+    optional int32  alarm_num           = 8;	
+    optional int32  is_last             = 9;	
+    optional string pos_guid            = 10;	
+    optional int32  pos_id              = 11;	
+    optional string pos_name            = 12;	
+    optional string pos_sequence        = 13;	
+    repeated PosCameraRelInfo rel_info	= 14;	
+}
+
+message VIPThiefLog
+{
+    optional string name                = 1;	
+    optional int32  sex                 = 2;	
+    optional string birthday            = 3;	
+    optional int32  age_group1          = 4;	
+    optional string phone               = 5;	
+    optional string preference          = 6;	
+    optional string remark              = 7;	
+    optional int32  agegroup2           = 8;	
+    optional int32  person_id           = 9;	
+    optional string cmaera_idx          = 10;	
+    optional string region_idx          = 11;	
+    optional string store_name          = 12;	
+    optional string store_idx           = 13; 	
+    optional string registe_name        = 14; 	
+    optional string registe_idx         = 15; 	
+    optional int32  face_id             = 16;	
+    optional string face_url            = 17;	
+    optional string back_url            = 18;	
+    optional string event_time          = 19;	
+    optional int32  type                = 20;	
+    optional string vip_number          = 21;	
+    optional int32  region_id		= 22;	
+}
+
+message InspectionPlanInfo
+{
+    required int32  plan_id             = 1;  
+    optional int32  store_id            = 2;  
+    optional string camera_index        = 3;  
+    optional int32  preset_point        = 4;  
+    optional string pic_url             = 5;  
+    optional string execute_time        = 6;  
+}
+
+
